@@ -70,7 +70,7 @@ def detect(line_thickness=1):
     # Initialize
     set_logging()
     device = select_device(opt.device)
-    half = False  # half precision only supported on CUDA
+    half = True  # half precision only supported on CUDA
 
     # Load model
     model = attempt_load(weights, map_location=device)  # load FP32 model
